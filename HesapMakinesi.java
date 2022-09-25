@@ -1,44 +1,27 @@
-import java.util.Scanner;
 
 public class HesapMakinesi {
-
-	public static void main(String[] args) {
-		
-	Scanner scan = new Scanner(System.in);
-	   System.out.print("Ýlk sayýyý giriniz:");
-	   	 int sayi1 = scan.nextInt();
-	   System.out.print("Ýkinci sayýyý giriniz:");
-	   	 int sayi2 = scan.nextInt();
-	   
-	   System.out.println("Lütfen yapmak istediðiniz iþlemi seçiniz:");
-	   System.out.println("1)Toplama\n2)Çýkarma\n3)Çarpma\n4)Bölme");
-	   System.out.print("Seçiminiz:");
-	   	 int secim = scan.nextInt();
-	   	 
-	 if(secim==1) {
-		 System.out.println("Toplam:" + (sayi1+sayi2));
-	 }
-	 else if(secim==2) {
-		 System.out.println("Çýkarma:" + (sayi1-sayi2));
-	 }
-	 else if(secim==3) {
-		 System.out.println("Çarpma:" + (sayi1*sayi2));
-	 }
-	 else if(secim==4) {
-		 if(sayi2==0) {
-			 System.out.println("Sonuç tanýmsýzdýr!");
-		 }
-		 else {
-			 System.out.println("Bölme:" + (sayi1/sayi2));
-		 }
-	 }
-	 else {
-		 System.out.println("Geçersiz bir iþlem girdiniz tekrar deneyiniz!");
-	 }
-	 
-	 
-		
-
+	
+	public int sayi1;
+	public int sayi2;
+	public String renk;
+	
+	HesapMakinesi(int sayi1, int sayi2,  String renk){
+		this.sayi1 = sayi1;
+		this.sayi2 = sayi2;
+		this.renk = renk;
+	}		
+	
+	public int toplama() {
+		return this.sayi1 + this.sayi2;
+	}
+	public int cikarma() {
+		return this.sayi1 - this.sayi2;
+	}
+	public int carpma() {
+		return this.sayi1 * this.sayi2;
+	}
+	public int bolme() {
+		return this.sayi1 / this.sayi2;
 	}
 
 }
